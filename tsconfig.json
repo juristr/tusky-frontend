@@ -10,34 +10,34 @@
       "path": "./apps/shop"
     },
     {
-      "path": "./packages/data-access-products"
+      "path": "./packages/products/data-access-products"
     },
     {
-      "path": "./packages/feat-current-orders"
+      "path": "./packages/products/feat-product-detail"
     },
     {
-      "path": "./packages/feat-product-detail"
+      "path": "./packages/orders/feat-current-orders"
     },
     {
-      "path": "./packages/data-access-order"
+      "path": "./packages/products/feat-product-list"
     },
     {
-      "path": "./packages/feat-cancel-order"
+      "path": "./packages/products/ui-product-detail"
     },
     {
-      "path": "./packages/feat-create-order"
+      "path": "./packages/orders/data-access-order"
     },
     {
-      "path": "./packages/feat-product-list"
+      "path": "./packages/orders/feat-cancel-order"
     },
     {
-      "path": "./packages/ui-product-detail"
+      "path": "./packages/orders/feat-create-order"
     },
     {
-      "path": "./packages/feat-past-orders"
+      "path": "./packages/orders/feat-past-orders"
     },
     {
-      "path": "./packages/ui-order-detail"
+      "path": "./packages/orders/ui-order-detail"
     },
     {
       "path": "./packages/tusky-design"
