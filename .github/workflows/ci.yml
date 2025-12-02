@@ -12,6 +12,7 @@ permissions:
 
 env:
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+  NX_FIX_CI_DEBUG_LOGGING: true
 
 jobs:
   main:
