@@ -4,10 +4,43 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/tusky-frontend-e2e"
+      "path": "./apps/shop-e2e"
     },
     {
-      "path": "./apps/tusky-frontend"
+      "path": "./apps/shop"
+    },
+    {
+      "path": "./packages/data-access-products"
+    },
+    {
+      "path": "./packages/feat-current-orders"
+    },
+    {
+      "path": "./packages/feat-product-detail"
+    },
+    {
+      "path": "./packages/data-access-order"
+    },
+    {
+      "path": "./packages/feat-cancel-order"
+    },
+    {
+      "path": "./packages/feat-create-order"
+    },
+    {
+      "path": "./packages/feat-product-list"
+    },
+    {
+      "path": "./packages/ui-product-detail"
+    },
+    {
+      "path": "./packages/feat-past-orders"
+    },
+    {
+      "path": "./packages/ui-order-detail"
+    },
+    {
+      "path": "./packages/tusky-design"
     }
   ]
 }
