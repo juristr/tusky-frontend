@@ -1,4 +1,9 @@
 import { test, expect } from '@playwright/test';
+import { setupApiMocks } from './fixtures/api-mocks';
+
+test.beforeEach(async ({ page }) => {
+  await setupApiMocks(page);
+});
 
 test('navigation to orders page works', async ({ page }) => {
   await page.goto('/');

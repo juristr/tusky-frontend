@@ -1,4 +1,9 @@
 import { test, expect } from '@playwright/test';
+import { setupApiMocks } from './fixtures/api-mocks';
+
+test.beforeEach(async ({ page }) => {
+  await setupApiMocks(page);
+});
 
 test('displays homepage with correct heading', async ({ page }) => {
   await page.goto('/');
