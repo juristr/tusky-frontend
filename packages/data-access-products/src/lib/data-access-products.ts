@@ -24,4 +24,3 @@ export async function getProductById(id: number): Promise<Product | undefined> {
   if (!res.ok) throw new Error('Failed to fetch product');
   return res.json() as Promise<Product>;
 }
-
