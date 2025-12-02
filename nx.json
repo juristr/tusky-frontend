@@ -75,6 +75,12 @@
   "targetDefaults": {
     "test": {
       "dependsOn": ["^build"]
+    },
+    "dev": {
+      "dependsOn": ["^build"]
+    },
+    "serve": {
+      "dependsOn": ["^build"]
     }
   },
   "generators": {
