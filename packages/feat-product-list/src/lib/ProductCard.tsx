@@ -8,9 +8,9 @@ export interface ProductCardProps {
   name: string;
   price: number;
   originalPrice?: number;
-  rating: number;
-  image: string;
-  category: string;
+  rating?: number;
+  image?: string;
+  category?: string;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -18,9 +18,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
   name,
   price,
   originalPrice,
-  rating,
-  image,
-  category,
+  rating = 0,
+  image = '',
+  category = '',
 }) => {
   const isOnSale = originalPrice !== undefined && originalPrice > price;
 

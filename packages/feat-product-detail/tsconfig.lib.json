@@ -2,6 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "out-tsc/feat-product-detail",
+    "lib": ["es2022", "dom"],
     "types": [
       "node",
       "@nx/react/typings/cssmodule.d.ts",

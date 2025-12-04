@@ -81,11 +81,13 @@ export function ProductDetailPage() {
     name: product.name,
     price: product.price,
     originalPrice: product.originalPrice,
-    description: `Experience the excellence of ${
-      product.name
-    }. This premium ${product.category.toLowerCase()} product has been carefully crafted to meet your highest expectations.`,
-    images: [product.image],
-    rating: product.rating,
+    description: `Experience the excellence of ${product.name}. This premium ${(
+      product.category ?? 'general'
+    ).toLowerCase()} product has been carefully crafted to meet your highest expectations.`,
+    images: [product.image ?? product.imageUrl ?? ''].filter(
+      Boolean
+    ) as string[],
+    rating: product.rating ?? 0,
     reviewCount: Math.floor(Math.random() * 1000) + 100,
     features: [
       'Premium quality materials',
