@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      '@juristr/tusky-design':
+        specifier: 1.1.0-beta.3
+        version: 1.1.0-beta.3
       '@react-router/node':
         specifier: ^7.2.0
         version: 7.9.6(react-router@7.9.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.9.3)
@@ -239,9 +242,6 @@ importers:
 
   packages/products/feat-product-detail:
     dependencies:
-      '@juristr/tusky-design':
-        specifier: 1.1.0-beta.3
-        version: 1.1.0-beta.3
       '@tusky/data-access-products':
         specifier: workspace:*
         version: link:../data-access-products
@@ -251,9 +251,6 @@ importers:
 
   packages/products/feat-product-list:
     dependencies:
-      '@juristr/tusky-design':
-        specifier: 1.1.0-beta.3
-        version: 1.1.0-beta.3
       '@tusky/data-access-products':
         specifier: workspace:*
         version: link:../data-access-products
