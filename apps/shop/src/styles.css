@@ -1,15 +1,15 @@
 @import 'tailwindcss';
 
-@source "../../../packages/data-access-order";
-@source "../../../packages/feat-cancel-order";
-@source "../../../packages/feat-create-order";
-@source "../../../packages/feat-current-orders";
-@source "../../../packages/feat-past-orders";
-@source "../../../packages/ui-order-detail";
-@source "../../../packages/data-access-products";
-@source "../../../packages/feat-product-detail";
-@source "../../../packages/feat-product-list";
-@source "../../../packages/ui-product-detail";
+@source "../../../packages/orders/data-access-order";
+@source "../../../packages/orders/feat-cancel-order";
+@source "../../../packages/orders/feat-create-order";
+@source "../../../packages/orders/feat-current-orders";
+@source "../../../packages/orders/feat-past-orders";
+@source "../../../packages/orders/ui-order-detail";
+@source "../../../packages/products/data-access-products";
+@source "../../../packages/products/feat-product-detail";
+@source "../../../packages/products/feat-product-list";
+@source "../../../packages/products/ui-product-detail";
 
 /* Custom styles for glitch effect */
 @keyframes glitch {

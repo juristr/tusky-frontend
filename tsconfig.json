@@ -38,6 +38,9 @@
     },
     {
       "path": "./packages/orders/ui-order-detail"
+    },
+    {
+      "path": "./tools/tailwind-sync-plugin"
     }
   ]
 }

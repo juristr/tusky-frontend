@@ -15,6 +15,18 @@
   "nx": {
     "tags": [
       "type:app"
-    ]
+    ],
+    "targets": {
+      "build": {
+        "syncGenerators": [
+          "@tusky/tailwind-sync-plugin:update-tailwind-globs"
+        ]
+      },
+      "dev": {
+        "syncGenerators": [
+          "@tusky/tailwind-sync-plugin:update-tailwind-globs"
+        ]
+      }
+    }
   }
 }
