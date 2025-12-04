@@ -58,4 +58,65 @@ test.describe('Product Detail Page', () => {
     await expect(page.getByTestId('product-not-found')).toBeVisible();
     await expect(page.locator('text=Product Not Found')).toBeVisible();
   });
+
+  test('displays product rating from API', async ({ page }) => {
+    await page.goto('/product/3');
+
+    const productDetail = page.getByTestId('product-detail');
+    await expect(productDetail).toBeVisible();
+
+    // Rating should load async and display value + count
+    // Product 3 has averageRating: 4.8, totalRatings: 256
+    // Rating component renders: "{value} ({count} reviews)"
+    await expect(productDetail.locator('text=256 reviews')).toBeVisible();
+  });
+
+  test('shows skeleton while rating is loading', async ({ page }) => {
+    // Delay the ratings API response to catch the skeleton
+    await page.route('**/api/ratings/*', async (route) => {
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          productId: 3,
+          averageRating: 4.8,
+          totalRatings: 256,
+        }),
+      });
+    });
+
+    await page.goto('/product/3');
+
+    // Skeleton should appear briefly (has animate-pulse class)
+    const skeleton = page.locator('.animate-pulse');
+    await expect(skeleton).toBeVisible();
+
+    // Then rating should appear
+    await expect(page.locator('text=256 reviews')).toBeVisible();
+  });
+
+  test('hides rating when API returns 404', async ({ page }) => {
+    // Override rating mock to return 404
+    await page.route('**/api/ratings/*', async (route) => {
+      await route.fulfill({
+        status: 404,
+        contentType: 'application/json',
+        body: JSON.stringify({ message: 'Rating not found' }),
+      });
+    });
+
+    await page.goto('/product/3');
+
+    const productDetail = page.getByTestId('product-detail');
+    await expect(productDetail).toBeVisible();
+
+    // Product name should be visible
+    await expect(page.getByTestId('product-name')).toContainText(
+      'Leather Crossbody Bag'
+    );
+
+    // Rating should NOT be visible (hidden on error)
+    await expect(page.locator('text=reviews')).toBeHidden();
+  });
 });

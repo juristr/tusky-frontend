@@ -4,3 +4,4 @@ packages:
   - 'packages/orders/*'
   - 'packages/products/*'
   - 'tools/*'
+  - 'packages/ratings/*'

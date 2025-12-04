@@ -38,6 +38,12 @@ importers:
         specifier: ^7.9.6
         version: 7.9.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
+      '@babel/core':
+        specifier: ^7.14.5
+        version: 7.28.5
+      '@babel/preset-react':
+        specifier: ^7.14.5
+        version: 7.28.5(@babel/core@7.28.5)
       '@eslint/js':
         specifier: ^9.8.0
         version: 9.39.1
@@ -248,6 +254,9 @@ importers:
       '@tusky/ui-product-detail':
         specifier: workspace:*
         version: link:../ui-product-detail
+      '@tusky/ui-ratings':
+        specifier: workspace:*
+        version: link:../../ratings/ui-ratings
 
   packages/products/feat-product-list:
     dependencies:
@@ -256,6 +265,14 @@ importers:
         version: link:../data-access-products
 
   packages/products/ui-product-detail: {}
+
+  packages/ratings/data-access-ratings: {}
+
+  packages/ratings/ui-ratings:
+    dependencies:
+      '@tusky/data-access-ratings':
+        specifier: workspace:*
+        version: link:../data-access-ratings
 
   tools/tailwind-sync-plugin:
     dependencies:

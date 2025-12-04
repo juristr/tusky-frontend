@@ -1,5 +1,6 @@
 import { ShoppingCart, Heart, Share2 } from 'lucide-react';
-import { Rating, Price, Button, IconButton } from '@juristr/tusky-design';
+import { Price, Button, IconButton } from '@juristr/tusky-design';
+import { ProductRating } from '@tusky/ui-ratings';
 import { useState } from 'react';
 
 interface ProductDetailProps {
@@ -10,8 +11,6 @@ interface ProductDetailProps {
     originalPrice?: number;
     description: string;
     images: string[];
-    rating: number;
-    reviewCount: number;
     features?: string[];
     inStock?: boolean;
   };
@@ -69,12 +68,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </h1>
 
             {/* Rating */}
-            <Rating
-              value={product.rating}
-              showCount
-              count={product.reviewCount}
-              className="mt-2"
-            />
+            <ProductRating productId={product.id} className="mt-2" />
           </div>
 
           {/* Price */}

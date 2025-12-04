@@ -41,6 +41,12 @@
     },
     {
       "path": "./tools/tailwind-sync-plugin"
+    },
+    {
+      "path": "./packages/ratings/data-access-ratings"
+    },
+    {
+      "path": "./packages/ratings/ui-ratings"
     }
   ]
 }

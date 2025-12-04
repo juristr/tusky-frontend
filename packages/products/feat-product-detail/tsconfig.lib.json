@@ -32,6 +32,9 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
+      "path": "../../ratings/ui-ratings/tsconfig.lib.json"
+    },
+    {
       "path": "../ui-product-detail/tsconfig.lib.json"
     },
     {
