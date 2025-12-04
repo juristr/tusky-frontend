@@ -81,8 +81,13 @@ export async function updateTailwindGlobsGenerator(
 
     // Find the import line again in cleaned content
     const cleanImportMatch = cleanedContent.match(importRegex);
+    if (!cleanImportMatch || cleanImportMatch.index === undefined) {
+      return {
+        outOfSyncMessage: 'Could not find import line after cleaning',
+      };
+    }
     const cleanImportEndIndex =
-      cleanedContent.indexOf('\n', cleanImportMatch!.index!) + 1;
+      cleanedContent.indexOf('\n', cleanImportMatch.index) + 1;
 
     // Insert new @source directives after the import
     const beforeImport = cleanedContent.substring(0, cleanImportEndIndex);
