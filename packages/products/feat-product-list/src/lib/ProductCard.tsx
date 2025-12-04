@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Badge, Rating, Price, Button, IconButton } from '@tusky/tusky-design';
+import {
+  Badge,
+  Rating,
+  Price,
+  Button,
+  IconButton,
+} from '@juristr/tusky-design';
 import { Heart, ShoppingCart } from 'lucide-react';
 
 export interface ProductCardProps {

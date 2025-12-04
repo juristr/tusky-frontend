@@ -38,9 +38,6 @@
     },
     {
       "path": "./packages/orders/ui-order-detail"
-    },
-    {
-      "path": "./packages/tusky-design"
     }
   ]
 }
