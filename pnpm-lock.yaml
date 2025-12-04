@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@juristr/tusky-design':
-        specifier: 1.2.0-beta.2
-        version: 1.2.0-beta.2
+        specifier: 1.2.0
+        version: 1.2.0
       '@react-router/node':
         specifier: ^7.2.0
         version: 7.9.6(react-router@7.9.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.9.3)
@@ -1140,8 +1140,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@juristr/tusky-design@1.2.0-beta.2':
-    resolution: {integrity: sha512-KEWOEawrlI9EWTXYkmCfEW8TSe0KV1LdtO7No/h8ZfTozVNTBifkJ4gNlUwfHCKQyu8xq4riM0r19VcO0hjv7A==}
+  '@juristr/tusky-design@1.2.0':
+    resolution: {integrity: sha512-cw89CfxHC7RECRrkrQ3+EU5Y6PrFkCwpEY9IjN1xpJPAVlPKAqHHkGCnqPAaDQRoI2G6olz8UhLSDJ1OfZCDKw==}
 
   '@microsoft/api-extractor-model@7.32.1':
     resolution: {integrity: sha512-u4yJytMYiUAnhcNQcZDTh/tVtlrzKlyKrQnLOV+4Qr/5gV+cpufWzCYAB1Q23URFqD6z2RoL2UYncM9xJVGNKA==}
@@ -7296,7 +7296,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@juristr/tusky-design@1.2.0-beta.2':
+  '@juristr/tusky-design@1.2.0':
     dependencies:
       clsx: 2.1.1
 
