@@ -260,6 +260,15 @@ importers:
 
   packages/products/ui-product-detail: {}
 
+  tools/tailwind-sync-plugin:
+    dependencies:
+      '@nx/devkit':
+        specifier: 22.1.1
+        version: 22.1.1(nx@22.1.1(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.17))(@swc/types@0.1.25)(typescript@5.9.3))(@swc/core@1.5.29(@swc/helpers@0.5.17)))
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.1
+
 packages:
   '@babel/code-frame@7.27.1':
     resolution:
@@ -12698,7 +12707,7 @@ snapshots:
 
   '@types/minimatch@6.0.0':
     dependencies:
-      minimatch: 9.0.5
+      minimatch: 10.0.3
 
   '@types/node@20.19.9':
     dependencies:
