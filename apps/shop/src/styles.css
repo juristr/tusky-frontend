@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+/* nx-tailwind-sources:start */
 @source "../../../packages/orders/data-access-order";
 @source "../../../packages/orders/feat-cancel-order";
 @source "../../../packages/orders/feat-create-order";
@@ -10,6 +11,10 @@
 @source "../../../packages/products/feat-product-detail";
 @source "../../../packages/products/feat-product-list";
 @source "../../../packages/products/ui-product-detail";
+/* nx-tailwind-sources:end */
+
+/* external npm package that uses Tailwind classes */
+@source "../../../node_modules/@juristr/tusky-design";
 
 /* Custom styles for glitch effect */
 @keyframes glitch {
