@@ -11,6 +11,8 @@
 @source "../../../packages/products/feat-product-detail";
 @source "../../../packages/products/feat-product-list";
 @source "../../../packages/products/ui-product-detail";
+@source "../../../packages/ratings/data-access-ratings";
+@source "../../../packages/ratings/ui-ratings";
 /* nx-tailwind-sources:end */
 
 /* external npm package that uses Tailwind classes */

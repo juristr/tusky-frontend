@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "@tusky/data-access-products": "workspace:*",
-    "@tusky/ui-product-detail": "workspace:*"
+    "@tusky/ui-product-detail": "workspace:*",
+    "@tusky/ui-ratings": "workspace:*"
   },
   "nx": {
     "tags": [

@@ -87,8 +87,6 @@ export function ProductDetailPage() {
     images: [product.image ?? product.imageUrl ?? ''].filter(
       Boolean
     ) as string[],
-    rating: product.rating ?? 0,
-    reviewCount: Math.floor(Math.random() * 1000) + 100,
     features: [
       'Premium quality materials',
       'Satisfaction guaranteed',
