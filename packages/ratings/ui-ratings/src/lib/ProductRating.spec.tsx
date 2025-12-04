@@ -17,7 +17,10 @@ describe('ProductRating', () => {
   describe('Loading state', () => {
     it('should show skeleton while loading', () => {
       mockGetProductRating.mockImplementation(
-        () => new Promise<undefined>(() => {})
+        () =>
+          new Promise<undefined>(() => {
+            /* intentionally empty - never resolves to test loading state */
+          })
       );
 
       const { container } = render(<ProductRating productId={1} />);
@@ -28,7 +31,10 @@ describe('ProductRating', () => {
 
     it('should apply className to skeleton', () => {
       mockGetProductRating.mockImplementation(
-        () => new Promise<undefined>(() => {})
+        () =>
+          new Promise<undefined>(() => {
+            /* intentionally empty - never resolves to test loading state */
+          })
       );
 
       const { container } = render(
