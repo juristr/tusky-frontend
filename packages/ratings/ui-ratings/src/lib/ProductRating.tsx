@@ -40,6 +40,9 @@ export function ProductRating({ productId, className }: ProductRatingProps) {
   return (
     <Rating
       value={rating.averageRating}
+      onCountClick={() => {
+        console.log('count clicked');
+      }}
       showCount
       count={rating.totalRatings}
       className={className}
